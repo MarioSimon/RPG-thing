@@ -18,7 +18,7 @@ namespace RPG.Movement
         }
 
         private void UpdateAnimator()
-        {
+        {         
             Vector3 velocity = navMeshAgent.velocity;
             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
             float speed = localVelocity.z;
@@ -29,8 +29,7 @@ namespace RPG.Movement
         public void StartMoveAction(Vector3 destination)
         {
             GetComponent<ActionScheduler>().StartAction(this);
-            //GetComponent<Fighter>().Cancel();
-            MoveTo(destination);       
+            MoveTo(destination);           
         }
 
         public void MoveTo(Vector3 destination)

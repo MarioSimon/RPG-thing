@@ -36,13 +36,20 @@ namespace RPG.Combat
             transform.LookAt(target.transform);
             if (timeSinceLastAttack < attackSpeed) return;
             // This will trigger the Hit() event
+            TriggerAttack();
+            timeSinceLastAttack = 0;
+        }
+
+        private void TriggerAttack()
+        {
+            GetComponent<Animator>().ResetTrigger("stopAttack");
             GetComponent<Animator>().SetTrigger("attack");
-            timeSinceLastAttack = 0;          
         }
 
         // Animation event
         private void Hit()
         {
+            if (target == null) return;
             target.TakeDamage(weaponDamage);
         }
 
@@ -66,10 +73,14 @@ namespace RPG.Combat
 
         public void Cancel()
         {
-            GetComponent<Animator>().SetTrigger("stopAttack");
+            StopAttack();
             target = null;
         }
 
-        
+        private void StopAttack()
+        {
+            GetComponent<Animator>().ResetTrigger("attack");
+            GetComponent<Animator>().SetTrigger("stopAttack");
+        }
     }
 }

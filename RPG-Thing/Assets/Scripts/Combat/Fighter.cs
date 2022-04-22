@@ -33,6 +33,7 @@ namespace RPG.Combat
 
         private void AttackBehaviour()
         {
+            transform.LookAt(target.transform);
             if (timeSinceLastAttack < attackSpeed) return;
             // This will trigger the Hit() event
             GetComponent<Animator>().SetTrigger("attack");
@@ -51,7 +52,7 @@ namespace RPG.Combat
         }
 
         public void Attack(CombatTarget combatTarget)
-        {
+        {          
             GetComponent<ActionScheduler>().StartAction(this);
             target = combatTarget.GetComponent<Health>();
         }

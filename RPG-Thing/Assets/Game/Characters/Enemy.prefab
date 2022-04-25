@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 7034690675508939820, guid: 3261dd2079c4aea4b8e988c892fd2ece, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7034690675840642153, guid: 3261dd2079c4aea4b8e988c892fd2ece, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -25,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7034690675840642157, guid: 3261dd2079c4aea4b8e988c892fd2ece, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3074426
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: 7034690675840642157, guid: 3261dd2079c4aea4b8e988c892fd2ece, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7034690675840642157, guid: 3261dd2079c4aea4b8e988c892fd2ece, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.8304243
+      value: 1.56
       objectReference: {fileID: 0}
     - target: {fileID: 7034690675840642157, guid: 3261dd2079c4aea4b8e988c892fd2ece, type: 3}
       propertyPath: m_LocalRotation.w
@@ -90,6 +94,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-3697698061139328850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7082979118314565055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3ee7f90d3476d4aba4da27947e3774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 5
+  suspicionTime: 5
 --- !u!114 &7884387642857601645
 MonoBehaviour:
   m_ObjectHideFlags: 0

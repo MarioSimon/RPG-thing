@@ -16,6 +16,8 @@ namespace RPG.SceneManagement
         [SerializeField] int sceneToLoad = -1;
         [SerializeField] Transform spawnPoint;
         [SerializeField] DestinationIdentifier destination;
+        [SerializeField] float fadeOutTime = 1f;
+        [SerializeField] float fadeInTime = 1f;
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))
@@ -31,12 +33,18 @@ namespace RPG.SceneManagement
                 Debug.LogError("Missing scene to load reference");
                 yield break;
             }
-
+            
             DontDestroyOnLoad(this.gameObject);
+
+            Fader fader = FindObjectOfType<Fader>();
+            yield return fader.FadeOut(fadeOutTime);
+            
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
+
+            yield return fader.FadeIn(fadeInTime);
 
             Destroy(this.gameObject);
         }
@@ -45,7 +53,6 @@ namespace RPG.SceneManagement
         {
             GameObject player = GameObject.FindWithTag("Player");
             player.transform.rotation = otherPortal.spawnPoint.transform.rotation;
-            //player.transform.position = otherPortal.spawnPoint.transform.position;
             player.GetComponent<NavMeshAgent>().Warp(otherPortal.spawnPoint.transform.position);
         }
 

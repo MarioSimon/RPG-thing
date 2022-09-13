@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using RPG.Saving;
 
 namespace RPG.SceneManagement
 {
@@ -37,12 +38,20 @@ namespace RPG.SceneManagement
             DontDestroyOnLoad(this.gameObject);
 
             Fader fader = FindObjectOfType<Fader>();
+            SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
+
             yield return fader.FadeOut(fadeOutTime);
+
+            savingWrapper.Save();
             
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
+            savingWrapper.Load();
+
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
+
+            savingWrapper.Save();
 
             yield return fader.FadeIn(fadeInTime);
 

@@ -196,6 +196,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420280338}
     m_Modifications:
+    - target: {fileID: 62853265498022223, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 9354f335-495f-4a1a-a94b-7ad4d4de32df
+      objectReference: {fileID: 0}
     - target: {fileID: 370691911517961131, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
       propertyPath: healthPoints
       value: 60
@@ -266,6 +270,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420280338}
     m_Modifications:
+    - target: {fileID: 62853265498022223, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 663f8e3b-3108-4c3b-b2b1-e89324e928dc
+      objectReference: {fileID: 0}
     - target: {fileID: 7082979118314565051, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -692,6 +700,10 @@ PrefabInstance:
       propertyPath: patrolpath
       value: 
       objectReference: {fileID: 2074524064}
+    - target: {fileID: 62853265498022223, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 1067fef1-f896-4278-8ddc-aac3c0cc7acb
+      objectReference: {fileID: 0}
     - target: {fileID: 7082979118314565051, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1154,6 +1166,10 @@ PrefabInstance:
       propertyPath: patrolpath
       value: 
       objectReference: {fileID: 1819976634}
+    - target: {fileID: 62853265498022223, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 5c1e824b-9c29-48ba-9b0b-c5d08782ec1a
+      objectReference: {fileID: 0}
     - target: {fileID: 7082979118314565051, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1310,6 +1326,7 @@ GameObject:
   - component: {fileID: 1566387022}
   - component: {fileID: 1566387024}
   - component: {fileID: 1566387021}
+  - component: {fileID: 1566387025}
   m_Layer: 2
   m_Name: Intro Sequence
   m_TagString: Untagged
@@ -1411,6 +1428,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b36fd5941ea5bb4db9fd4bee71fb156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1566387025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566387018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea9374b509b70f4bba37e4a2ca8cf00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: 9c7fe281-65f7-4cbc-96ea-24ad25c1dd87
 --- !u!1001 &1642775501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1422,6 +1452,10 @@ PrefabInstance:
       propertyPath: patrolpath
       value: 
       objectReference: {fileID: 2092635723}
+    - target: {fileID: 62853265498022223, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 37a57ac4-8e2b-4e33-a371-439f8c2de78b
+      objectReference: {fileID: 0}
     - target: {fileID: 7082979118314565051, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1501,7 +1535,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693623550}
-  m_LocalRotation: {x: 0.08172184, y: -0.014943903, z: 0.0012254805, w: 0.9965424}
+  m_LocalRotation: {x: 0.081721865, y: -0.014943869, z: 0.0012254779, w: 0.9965424}
   m_LocalPosition: {x: 7.32, y: 2.83, z: -1.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1551,6 +1585,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420280338}
     m_Modifications:
+    - target: {fileID: 62853265498022223, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 6b88c06d-34ab-439d-ab8c-b532ff5ff90d
+      objectReference: {fileID: 0}
     - target: {fileID: 7082979118314565051, guid: 042d475d4c5db7f43b6a03a63246f87e, type: 3}
       propertyPath: m_RootOrder
       value: 1
